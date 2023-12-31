@@ -1,0 +1,18 @@
+---
+layout: default
+title: Test
+---
+
+<h2>{{ page.title }}</h2>
+
+<p>The newest</p>
+
+<ul>
+
+	{% for post in sites.posts %}
+
+		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}"></a></li>
+
+	{% endfor %}
+
+</ul>
